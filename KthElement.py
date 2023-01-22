@@ -24,6 +24,6 @@ def kthElement(Arr1, Arr2, k):
         else:
             combined_array.append(Arr2[0])
             Arr2 = Arr2[1:]
-    #if k < 0 or k > len(combined_array):                    #cases where k is an invalid target
-    #    return False
+    if k < 0 or k > len(combined_array):                    #cases where k is an invalid target
+        return False
     return kthElementHelper(combined_array, 1, len(combined_array), k)
