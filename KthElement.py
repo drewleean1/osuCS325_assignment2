@@ -24,6 +24,13 @@ def kthElement(Arr1, Arr2, k):
         else:
             combined_array.append(Arr2[0])
             Arr2 = Arr2[1:]
+    if len(Arr1) > 0:                                       #case if we exit loop and one array isn't empty yet
+        for x in Arr1:
+            combined_array.append(x)
+    if len(Arr2) > 0:
+        for y in Arr2:
+            combined_array.append(y)
     if k < 0 or k > len(combined_array):                    #cases where k is an invalid target
         return False
     return kthElementHelper(combined_array, 1, len(combined_array), k)
+
